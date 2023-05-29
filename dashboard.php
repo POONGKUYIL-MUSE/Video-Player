@@ -2,30 +2,34 @@
 <?php require_once("helpers/db_connect.php"); ?>
 <?php site_header(); ?>
 <?php
-session_start();
 if (isset($_SESSION['id'])) {
+
+  nav_bar();
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-  <div class="container-fluid ">
-    <a class="navbar-brand" href="#">Video Player</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <?php echo $_SESSION['username']; ?>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
+<div class="row m-3">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card ">
+        <img src="resources/images/music3.jpg" class="card-img-top" alt="..." height="30%">
+        <div class="card-body text-center">
+          <h5 class="card-title">Projects</h5>
+          <a href="projects.php" class="btn btn-primary">Manage</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card ">
+        <img src="resources/images/music3.jpg" class="card-img-top" alt="..." height="30%">
+        <div class="card-body text-center">
+          <h5 class="card-title">Videos</h5>
+          <a href="videos.php" class="btn btn-primary">Manage</a>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</div>
+
 
 <?php
 } else{
