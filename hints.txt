@@ -1,0 +1,42 @@
+projects
++ id
++ project_name
++ project_desc
++ createdat
++ createdby
++ updatedat
++ updatedby
+
+screens
++ id
++ project_id
++ screen_name
++ createdat
++ createdby
++ updatedat
++ updatedby
+
+videos
++ id
++ project_id
++ screen_id
++ video_name
++ video_path
++ createdat
++ createdby
++ updatedat
++ updatedby
+
+CREATE TABLE `screens` (
+  `id` int(11) NOT NULL,
+  `project_id` int(11) NOT NULL,
+  `screen_name` varchar(100) NOT NULL,
+  `createdat` datetime NOT NULL,
+  `createdby` int(11) NOT NULL,
+  `updatedat` datetime NOT NULL,
+  `updatedby` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+ALTER TABLE `screens`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `screens`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
